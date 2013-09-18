@@ -8,12 +8,13 @@ This work is used in the following article.
 >Chih-Yu Wang and Hung-Yu Wei, “IEEE 802.11n MAC Enhancement and Performance Evaluation,” ACM/Springer Mobile Networks and Applications Journal (MONET), Vol. 14, Issue 6, pp 760-771, Dec. 2009
 
 
-Organization Statistics 
+Organization Statistics
 -------
-Please remember to fill this [form][https://spreadsheets.google.com/viewform?formkey=dFpNOVdlUG80WHBxSE5FSEdfOVl0Y1E6MQ] before you download the code. 
+Please remember to fill this [form](https://spreadsheets.google.com/viewform?formkey=dFpNOVdlUG80WHBxSE5FSEdfOVl0Y1E6MQ) before you download the code. 
 
 Citation information
 --------
+
 Additionally, please cite our work using the following bibtex:
 
 	@article{Wang:2009:IME:1741412.1741615,
