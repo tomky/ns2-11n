@@ -1,0 +1,28 @@
+
+*** Modified files in JOE when it aborted on Fri Oct  3 15:51:57 2008
+*** JOE was aborted by signal 1
+
+*** File '(Unnamed)'
+recvDA
+recvDA
+sendBACK
+Packet
+sendBACK
+Xlet
+sendBACK
+recvDA
+recvDA
+sendBACK
+
+*** File '(Unnamed)'
+README
+INSTALLATION
+conf/lynx.cfg
+INSTALL
+README
+INSTALL
+INSTALL
+install-sh
+INSTALL
+frmts/fit/fitdataset.cpp
+README

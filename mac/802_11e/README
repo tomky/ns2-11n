@@ -1,0 +1,105 @@
+Note:
+*****
+
+The model lacks the HCCA, any management
+mechanisms like Association/Reassociation, Authentication /
+Deauthentication. In addition, no superframe structure with Beacon
+frames and no power-saving methods are supported (as in the original
+ns-2 model).
+
+The RTS/CTS mechanism, which is included in the legacy ns-802.11
+model, has never been tested and verified. Therefore we do not
+recommend to use RTS/CTS without reviewing the code in detail.
+
+This model only works with ns-2.28. Several changes might be needed to
+use it in combination with other ns versions.
+
+Installation of MAC 802.11e EDCA-Code:
+**************************************
+
+1. please change into the directory ns-whatever/ns-x.y/mac/
+
+2. copy the tgz file into this directory and extract it with:
+     tar -xvzf filename.tgz 	
+
+3. changes to your Makefile.in in ns-whatever/ns-x.y/:
+   - add to INCLUDES: 
+               	-I./mac/802_11e
+   - add to OBJ_CC:   
+               	mac/802_11e/mac-802_11e.o mac/802_11e/priq.o 
+               	mac/802_11e/d-tail.o mac/802_11e/mac-timers_802_11e.o	 
+   - exclude in NS_TCL_LIB:
+               	tcl/lib/ns-mobilenode.tcl \	       
+   - add to NS_TCL_LIB:
+               	mac/802_11e/ns-mobilenode_EDCA.tcl \
+	       	mac/802_11e/priority.tcl \
+
+4. changes to your ns-whatever/ns-x.y/tcl/lib/ns-lib.tcl:
+   - exclude from the source list:
+	       	source ns-mobilenode.tcl
+   - add to the source list: 
+               	source ../../mac/802_11e/ns-mobilenode_EDCA.tcl
+               	source ../../mac/802_11e/priority.tcl
+
+5. changes to your ns-whatever/ns-x.y/tcl/lib/ns-default.tcl:
+   - add:
+               	Queue/DTail set drop_front_ false
+               	Queue/DTail set summarystats_ false
+               	Queue/DTail set queue_in_bytes_ false
+               	Queue/DTail set mean_pktsize_ 500
+	       	Queue/DTail/PriQ set Prefer_Routing_Protocols    1
+               	Queue/DTail/PriQ set Max_Levels   4 
+               	Queue/DTail/PriQ set Levels    4
+		
+		Mac/802_11e set SlotTime_      0.000020    ;# 20us
+		Mac/802_11e set SIFS_          0.000010    ;# 10us
+	        Mac/802_11e set PreambleLength_        144 ;# 144 bit
+		Mac/802_11e set PLCPHeaderLength_      48  ;# 48 bits
+		Mac/802_11e set PLCPDataRate_  1.0e6       ;# 1Mbps	       
+
+		Mac/802_11e set RTSThreshold_  3000        ;# bytes
+ 		Mac/802_11e set ShortRetryLimit_       7   ;# retransmittions
+		Mac/802_11e set LongRetryLimit_        4   ;# retransmissions
+
+6.  add to tcl/lan/ns-mac.tcl:
+               if [TclObject is-class Mac/802_11e] {
+                 ...
+	         copy settings of MAC/802.11 
+		 (which are contained in this file) into this section
+                 and at an "e" at the end of the "Mac/802_11" terms
+		 ...
+	         Mac/802_11e set cfb_ 0 ;# disables CFB
+	       }
+
+7. mac/wireless-phy.h: 
+  	change  
+		enum ChannelStatus {IDLE, RECV, SEND};
+	to
+		enum ChannelStatus {IDLE, RECVING, SENDING};
+   mac/wireless-phy.cc:
+	replace all occurences of RECV and SEND (by RECVING and SENDING).
+
+8. common/packet.h:
+	add
+		#define HDR_MAC802_11E(p) ((hdr_mac802_11e *)hdr_mac::access(p))
+
+9. run ./configure; make clean; make depend; make in your ns directory
+
+10. happy simulating :o) (e.g with the example script ../ns-x/mac/802.11e/multi_udpflows.tcl) 
+
+
+Simulations with 802.11e EDCA
+*****************************
+
+- in your simulation script: After defining your transport_agent
+  % set transport_agent [new Agent/UDP]
+  ,just add 
+  % $your_transport_agent prio_ x 
+  to give a certain flow a specific priority
+  (x between 0 and 3, 0 being the highest, 3 being the lowest priority).
+
+- changes to 802.11e parameters (CW_MIN, CW_MAX, AIFS, TXOPLimit, PF) should be
+  made in ../ns-x/mac/802_11e/priority.tcl for each queue. Please rerun make afterwards.
+
+- please set Mac/802_11e cfb_ to 1 (in tcl/lan/ns-mac.tcl) if you want to enable CFB in 
+  your simulations. Rerun make afterwards. 

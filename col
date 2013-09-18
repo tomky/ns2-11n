@@ -1,0 +1,258 @@
+802_11n/mac-timers_802_11n.cc:// due to internal collision (not standard conform!)
+802_11n/mac-timers_802_11n.cc:					 * - backoff procedure due to internal collision, or
+802_11n/mac-802_11n.bak2.cc:Mac802_11n::collision(Packet *p)
+802_11n/mac-802_11n.bak2.cc:		 *  Since a collision has occurred, figure out
+802_11n/mac-802_11n.bak2.cc:		 *  which packet that caused the collision will
+802_11n/mac-802_11n.bak2.cc:				collision(p);
+802_11n/mac-802_11n.bak2.cc:			collision(p);
+802_11n/mac-802_11n.bak2.cc:	 * Handle collisions.
+802_11n/mac-802_11n.bak2.cc:	 * if received packet has no  errors and had no collision, but nav 
+802_11n/mac-802_11n.bak2.cc:	 * was set due to an earlier collision, nav has to be reset!
+802_11n/mac-802_11n.h:	void		collision(Packet *p);
+Binary file 802_11n/mac-802_11n.o matches
+802_11n/mac-802_11n.cc:Mac802_11n::collision(Packet *p)
+802_11n/mac-802_11n.cc:		 *  Since a collision has occurred, figure out
+802_11n/mac-802_11n.cc:		 *  which packet that caused the collision will
+802_11n/mac-802_11n.cc:			collision(p);
+802_11n/mac-802_11n.cc:	 * Handle collisions.
+802_11n/mac-802_11n.cc:	 * if received packet has no  errors and had no collision, but nav 
+802_11n/mac-802_11n.cc:	 * was set due to an earlier collision, nav has to be reset!
+802_11n/mac-802_11n.h~:	void		collision(Packet *p);
+802_11n/CHANGELOG:	- increment of retry counter in case of internal collisions
+802_11n/CHANGELOG:	- removed small tracing error; now collisions of data frames
+802_11n/mac-timers_802_11n.cc~:// due to internal collision (not standard conform!)
+802_11n/mac-timers_802_11n.cc~:					 * - backoff procedure due to internal collision, or
+802_11n/mac-802_11n-1.h:	void		collision(Packet *p);
+802_11n/mac-802_11n-2.h:	void		collision(Packet *p);
+802_11n/mac-802_11n.cc~:Mac802_11n::collision(Packet *p)
+802_11n/mac-802_11n.cc~:		 *  Since a collision has occurred, figure out
+802_11n/mac-802_11n.cc~:		 *  which packet that caused the collision will
+802_11n/mac-802_11n.cc~:			collision(p);
+802_11n/mac-802_11n.cc~:	 * Handle collisions.
+802_11n/mac-802_11n.cc~:	 * if received packet has no  errors and had no collision, but nav 
+802_11n/mac-802_11n.cc~:	 * was set due to an earlier collision, nav has to be reset!
+802_11n/mac-802_11n.bak.cc:Mac802_11n::collision(Packet *p)
+802_11n/mac-802_11n.bak.cc:		 *  Since a collision has occurred, figure out
+802_11n/mac-802_11n.bak.cc:		 *  which packet that caused the collision will
+802_11n/mac-802_11n.bak.cc:				collision(p);
+802_11n/mac-802_11n.bak.cc:			collision(p);
+802_11n/mac-802_11n.bak.cc:	 * Handle collisions.
+802_11n/mac-802_11n.bak.cc:	 * if received packet has no  errors and had no collision, but nav 
+802_11n/mac-802_11n.bak.cc:	 * was set due to an earlier collision, nav has to be reset!
+802_11n/mac-802_11n-1.cc:Mac802_11n::collision(Packet *p)
+802_11n/mac-802_11n-1.cc:		 *  Since a collision has occurred, figure out
+802_11n/mac-802_11n-1.cc:		 *  which packet that caused the collision will
+802_11n/mac-802_11n-1.cc:			collision(p);
+802_11n/mac-802_11n-1.cc:	 * Handle collisions.
+802_11n/mac-802_11n-1.cc:	 * if received packet has no  errors and had no collision, but nav 
+802_11n/mac-802_11n-1.cc:	 * was set due to an earlier collision, nav has to be reset!
+802_11n/mac-802_11n-2.cc:Mac802_11n::collision(Packet *p)
+802_11n/mac-802_11n-2.cc:		 *  Since a collision has occurred, figure out
+802_11n/mac-802_11n-2.cc:		 *  which packet that caused the collision will
+802_11n/mac-802_11n-2.cc:				collision(p);
+802_11n/mac-802_11n-2.cc:			collision(p);
+802_11n/mac-802_11n-2.cc:	 * Handle collisions.
+802_11n/mac-802_11n-2.cc:	 * if received packet has no  errors and had no collision, but nav 
+802_11n/mac-802_11n-2.cc:	 * was set due to an earlier collision, nav has to be reset!
+802_11n/mac-802_11n-rd1.cc:Mac802_11n::collision(Packet *p)
+802_11n/mac-802_11n-rd1.cc:		 *  Since a collision has occurred, figure out
+802_11n/mac-802_11n-rd1.cc:		 *  which packet that caused the collision will
+802_11n/mac-802_11n-rd1.cc:			collision(p);
+802_11n/mac-802_11n-rd1.cc:	 * Handle collisions.
+802_11n/mac-802_11n-rd1.cc:	 * if received packet has no  errors and had no collision, but nav 
+802_11n/mac-802_11n-rd1.cc:	 * was set due to an earlier collision, nav has to be reset!
+CHANGES.html:<br>Added support for tracing satellite aloha collisions, and enhanced the
+CHANGES.html:for mac layer. Now collision are reported in trace file as 'c' If there
+CHANGES.html:are 17 collisions for a packet, it indicates that it is dropped due to
+CHANGES.html:extensive collisions
+CHANGES.html:<br>Added support for collision (MAC level) traces on the IEEE 802.3 LAN
+DEADJOE:Mac802_11n::collision(Packet *p)
+DEADJOE:		 *  Since a collision has occurred, figure out
+DEADJOE:		 *  which packet that caused the collision will
+DEADJOE:			collision(p);
+DEADJOE:	 * Handle collisions.
+DEADJOE:	 * if received packet has no  errors and had no collision, but nav 
+DEADJOE:	 * was set due to an earlier collision, nav has to be reset!
+doc/lan.tex:certain set of functionalities such as: carrier sense, collision
+doc/lan.tex:detection, collision avoidance, etc.  Since these functionalities affect
+doc/lan.tex:carry out carrier sense, contention, and collision detection.  If more
+doc/lan.tex:than one transmissions overlaps in time, a channel raises the collision
+doc/lan.tex:flag.  By checking this flag, the MAC object can implement collision detection
+doc/lan.tex:state to schedule packet delivery and detect collisions.  It exports the
+doc/lan.tex:        virtual int collision() \{ return numtx_ > 1; \}
+doc/lan.tex:\item  \code{collision()} method indicates whether a collision occurs
+doc/lan.tex:the contention period, the MAC can use the \code{collision()} method to
+doc/lan.tex:detect collision.
+doc/lan.tex:The \code{CsmaCdMac} extends \code{CsmaMac} to carry out collision
+doc/lan.tex:method checks for collision using the \code{Channel::collision()}
+doc/lan.tex:method.  If there is a collision, the MAC invokes its \code{backoff}
+doc/lan.tex:carry out the collision avoidance (CSMA/CA) procedure.  Instead of
+doc/mobility.tex:  subject to collisions and the radio propagation model receives
+Binary file doc/everything.dvi matches
+doc/everything.log:e \T1/pcr/m/n/10 Channel::collision()
+doc/diffusion.tex:So previously this only-brdcast feature supported for diffusion packets resulted in some problems at the mac layer. The mac-802.11 doesnot try to re-transmit a broadcast packet incase there is a collision and the packet is dropped. Coupled to this was the fact that mac-802.11 didn't do random selection of slots in the contention window before it transmitted a packet (a brdcast data or rts for unicast pkts). As a result there were a high number of collisions at the mac layer and a lot of packets were lost. This was fixed by adding random selection of slots before mac tx'ed a brdcast pkt (or a rts pkt).
+doc/diffusion.tex:What this does is it in addition to delaying certain messages (to avoid collisions), when run with a BROADCAST MAC layer, diffusion will use a different set of values for delays and jitters. These different delay/jitter values are defined under diffusion3/lib/main/config.hh. Since this might increase the latency 
+doc/satellite.tex:it does not do collision detection), and
+doc/satellite.tex:wait to detect a collision on a packet, for example.
+doc/satellite.tex:collision detection is performed if the MAC, such as the Aloha MAC,
+Binary file emulate/support/nrgarp matches
+FILES:tcl/test/test-output-satellite/aloha.collisions.Z
+Binary file gen/ns_tcl.o matches
+gen/ns_tcl.cc:Mac/Sat set trace_collisions_ true\n\
+gen/ns_tcl.cc:Mac/Sat/UnslottedAloha set mean_backoff_ 1s; # mean backoff time upon collision\n\
+mac/wired-phy.h:	   contention, collision features */
+mac/mac-802_11.h:	void		collision(Packet *p);
+Binary file mac/mac-802_11.o matches
+mac/mac-802_3.cc:			// 2,3 were in RX (from 1), then IFS, then TX, then collision with 1 and IFS
+mac/mac-802_3.cc:			// TX, this forces a collision.
+mac/mac-802_3.cc:		collision(p); //received packet while sending or receiving
+mac/mac-802_3.cc:                   reception completes, or if collision.  Either way,
+mac/mac-802_3.cc:	// because there may be collision and it may be freed
+mac/mac-802_3.cc:void Mac802_3::collision(Packet *p) {
+mac/mac-802_3.cc:	  // If mac trace feature is on generate a collision trace for this packet. 
+mac/mac-802_3.cc:		// more than 2 packets collisions possible
+mac/mac-802_3.cc:   - collision and backoffLimit's exceeded
+mac/mac-802_3.cc:   - collision while receiving */
+mac/mac.h:#define EF_COLLISION 2		// collision error flag
+mac/mac-csma.cc:	// If there is a collision, backoff
+mac/mac-csma.cc:	if (channel_->collision()) {
+mac/channel.h:Channel:  a shared medium that supports contention and collision
+mac/channel.h:	//virtual int collision() { return numtx_ > 1; }
+mac/channel.h:	double delay_;     // channel delay, for collision interval
+mac/smac.cc:	mac_collision_ = 0;
+mac/smac.cc:	   incase of a collision.
+mac/smac.cc:		// Bug fixed here. a collision might happen just now, need to clear the mac_collision_ flag, otherwise the node won't receive any following packet
+mac/smac.cc:		if (mac_collision_) {
+mac/smac.cc:                	mac_collision_ = 0;
+mac/smac.cc:	if (mac_collision_) {
+mac/smac.cc:		mac_collision_ = 0;
+mac/smac.cc:			collision(p);
+mac/smac.cc:void SMAC::collision(Packet *p) {
+mac/smac.cc:	if (!mac_collision_)
+mac/smac.cc:		mac_collision_ = 1;
+mac/smac.cc:	// since a collision has occured figure out which packet that caused 
+mac/smac.cc:	// the collision will "last" longer. Make this pkt pktRx_ and reset the
+mac/mac-802_11.cc: * be delayed will be due to a collision => the medium won't really be
+mac/mac-802_11.cc:Mac802_11::collision(Packet *p)
+mac/mac-802_11.cc:		 *  Since a collision has occurred, figure out
+mac/mac-802_11.cc:		 *  which packet that caused the collision will
+mac/mac-802_11.cc:			collision(p);
+mac/mac-802_11.cc:	 * Handle collisions.
+mac/mac-802_11.h~:	void		collision(Packet *p);
+mac/mac-tdma.cc:	/* Detect if there is any collision happened. should not happen...?*/
+mac/mac-tdma.cc:		   as collision should not happen...
+mac/mac-tdma.cc:	/* Perform carrier sence...should not be collision...? */
+mac/mac-tdma.cc:		/* Note: we don't take the channel status into account, ie. no collision,
+mac/mac-tdma.cc:		   as collision should not happen...
+mac/mac-tdma.cc:	/* Check if any collision happened while receiving. */
+mac/mac-simple.cc:			/* power is high enough to result in collision */
+mac/mac-simple.cc:	// jitter to reduce chance of unnecessary collisions
+mac/mac-simple.cc:		// recv collision, so discard the packet
+mac/wired-phy.cc:	 *  collision/contention
+mac/wired-phy.cc:	/* check with propagation model for collision, channel 
+mac/smac.h:  void collision(Packet *p);
+mac/smac.h:  int mac_collision_;            
+Binary file mac/smac.o matches
+mac/802_11e/mac-timers_802_11e.cc:					 * - backoff procedure due to internal collision, or
+mac/802_11e/mac-802_11e.h:	void		collision(Packet *p);
+Binary file mac/802_11e/mac-802_11e.o matches
+mac/802_11e/mac-802_11e.cc:Mac802_11e::collision(Packet *p)
+mac/802_11e/mac-802_11e.cc:		 *  Since a collision has occurred, figure out
+mac/802_11e/mac-802_11e.cc:		 *  which packet that caused the collision will
+mac/802_11e/mac-802_11e.cc:			collision(p);
+mac/802_11e/mac-802_11e.cc:	 * Handle collisions.
+mac/802_11e/mac-802_11e.cc:	 * if received packet has no  errors and had no collision, but nav 
+mac/802_11e/mac-802_11e.cc:	 * was set due to an earlier collision, nav has to be reset!
+mac/802_11e/CHANGELOG:	- increment of retry counter in case of internal collisions
+mac/802_11e/mac-timers_802_11e.cc~:					 * - backoff procedure due to internal collision, or
+mac/802_11e/mac-802_11e.cc~:Mac802_11e::collision(Packet *p)
+mac/802_11e/mac-802_11e.cc~:		 *  Since a collision has occurred, figure out
+mac/802_11e/mac-802_11e.cc~:		 *  which packet that caused the collision will
+mac/802_11e/mac-802_11e.cc~:			collision(p);
+mac/802_11e/mac-802_11e.cc~:	 * Handle collisions.
+mac/802_11e/mac-802_11e.cc~:	 * if received packet has no  errors and had no collision, but nav 
+mac/802_11e/mac-802_11e.cc~:	 * was set due to an earlier collision, nav has to be reset!
+mac/channel.cc:		 * Since collisions occur at the receiver, we can have
+mac/channel.cc://  If collision occur (>1 pkts overlap), corrupt all pkts involved
+mac/channel.cc:// 	// without collision, return 0
+mac/channel.cc:// 	// now < busy => collision
+mac/channel.cc://  Some MAC protocols use this to let other MAC detect collisions
+mac/channel.cc:// 	// without collision, return 0
+mac/mac-802_3.h:	int trace_;      // To turn on MAC level collision traces 
+mac/mac-802_3.h:	void		collision(Packet *p);
+Binary file mac/mac-802_3.o matches
+Binary file ns matches
+Binary file nse matches
+queue/drr.cc:	int src;    //to detect collisions keep track of actual src address
+queue/drr.cc:	/*detect collisions here */
+satellite/satlink.h:	SatTrace* coll_trace_; // Trace object for collisions in Mac
+satellite/satlink.h:	int trace_collisions_; // OTcl-settable flag for whether we trace coll.
+Binary file satellite/satlink.o matches
+satellite/satlink.cc:	bind_bool("trace_collisions_", &trace_collisions_);
+satellite/satlink.cc:	// The packet will be held (for collision detection) for txtime 
+satellite/satlink.cc:		// txtime to make sure no collisions occur 
+satellite/satlink.cc:		// If this is the first collision, we will also have a
+satellite/satlink.cc:			// Before dropping rcv_pkt_, trace the collision
+satellite/satlink.cc:				if (coll_trace_ && trace_collisions_)
+satellite/satlink.cc:		// Again, before we drop this packet, log a collision if
+satellite/satlink.cc:			if (coll_trace_ && trace_collisions_)
+tcl/ex/sat-aloha.tcl:# 2.  basic_tracing:  Same as "basic", but drops ("d") and collisions ("c")
+tcl/ex/sat-aloha.tcl:#             still operates in stop-and-wait mode, and collisions and 
+tcl/ex/sat-aloha.tcl:	Mac/Sat set trace_collisions_ false
+tcl/edu/rts-cts/rts-cts-data-ack.nam:v -t 0.01 -e sim_annotation 0.001 2 carrier sense only provides information about collisions at the sender,not at 
+tcl/edu/rts-cts/rts-cts-data-ack.nam:v -t 0.025 -e sim_annotation 0.004 5 to the same receiver, resulting in  collisions at the receiver. To solve 
+tcl/edu/rts-cts/rts-cts-data-ack.nam:v -t 1.0153 -e sim_annotation 1.0153 61 Node 0 sends RTS which Node 2 does not hear but it hears the CTS sent by receiver and thus backsoff after hearing CTS, thus avoiding collision at the receiver
+tcl/edu/rts-cts/RTS-CTS-DATA-ACKdescription:range, carrier sense only provides information about collisions at the
+tcl/edu/rts-cts/RTS-CTS-DATA-ACKdescription:same time, to the same receiver, resulting in collisions at the
+tcl/edu/rts-cts/RTS-CTS-DATA-ACKdescription:facilitate recovery from collision faster. RTS and CTS packets are very
+tcl/edu/rts-cts/RTS-CTS-DATA-ACKdescription:short, hence their collision is very less likely.If RTS packets from 2
+tcl/edu/rts-cts/RTS-CTS-DATA-ACKdescription:resulting in collision detection.
+tcl/edu/rts-cts/RTS-CTS-DATA-ACKdescription:and hence avoiding collision at the receiver.
+tcl/edu/rts-cts/RTS-CTS-DATA-ACKdescription:So, we see in all 3 cases, one node backsoff, thus avoiding collisions at the
+tcl/edu/rts-cts/rts-cts-data-ack.pl:		print Destination 'v -t 0.01 -e sim_annotation 0.001 2 carrier sense only provides information about collisions at the sender,not at ', "\n";
+tcl/edu/rts-cts/rts-cts-data-ack.pl:		print Destination 'v -t 0.025 -e sim_annotation 0.004 5 to the same receiver, resulting in  collisions at the receiver. To solve ', "\n";
+tcl/edu/rts-cts/rts-cts-data-ack.pl:		print Destination 'v -t ', @fields[1], ' -e sim_annotation ', @fields[1], ' ', $i, ' Node 0 sends RTS which Node 2 does not hear but it hears the CTS sent by receiver and thus backsoff after hearing CTS, thus avoiding collision at the receiver', "\n";
+tcl/edu/hidden-terminal/sht.nam:v -t 0.003 -e sim_annotation 0.003 4 Nodes turn red when there is a collision 
+tcl/edu/hidden-terminal/sht.nam:v -t 0.200125 -e sim_annotation 0.200125 12 thus finding channel to be free , so they send packets at the same time and therefore result in collision at the receiver
+tcl/edu/hidden-terminal/sht.nam:v -t 0.450175 -e sim_annotation 0.450175 20 and they send packets at the same time, thus resulting in a collision at the receiver. 
+tcl/edu/hidden-terminal/SimpleHiddenTerminaldescription:same time, to the same receiver, resulting in collisions at the
+tcl/edu/hidden-terminal/SimpleHiddenTerminaldescription:are dropped due to collision at the receiver.
+tcl/edu/hidden-terminal/SimpleHiddenTerminaldescription:As a result, their is no collision at the receiver.
+tcl/edu/hidden-terminal/SimpleHiddenTerminaldescription:data packets to the receiver at the same time, thus causing a collision
+tcl/edu/hidden-terminal/SimpleHiddenTerminaldescription:the destination at different times, thus avoiding a collision at the
+tcl/edu/hidden-terminal/SimpleHiddenTerminaldescription:causing a collision and hence drop of packets.
+tcl/edu/hidden-terminal/ht-post.pl:# When there is a collision at the reciever, it turns red.
+tcl/edu/hidden-terminal/ht-post.pl:		print Destination 'v -t 0.003 -e sim_annotation 0.003 4 Nodes turn red when there is a collision ', "\n";
+tcl/edu/hidden-terminal/ht-post.pl:				print Destination 'v -t ', $last_time, ' -e sim_annotation ', $last_time, ' ',$i,' thus finding channel to be free , so they send packets at the same time and therefore result in collision at the receiver',"\n";
+tcl/edu/hidden-terminal/ht-post.pl:				print Destination 'v -t ', $last_time, ' -e sim_annotation ', $last_time,' ', $i,' and they send packets at the same time, thus resulting in a collision at the receiver. ',"\n";
+tcl/edu/chan-interference/chanInterference.nam:v -t 0.003 -e sim_annotation 0.003 2 Nodes turn red when there is a collision 
+tcl/edu/chan-interference/chanInterference.nam:v -t 0.1858 -e sim_annotation 0.1858 8 received are the same signal strength and hence they interfere with each other at the receiver resulting in collision.
+tcl/edu/chan-interference/channelInterferenceDescription:that senses carrier later, backs off, thus avoiding collision at the receiver.
+tcl/edu/chan-interference/channelInterferenceDescription:and hence there is a collision at the receiver.
+tcl/edu/chan-interference/chanInterference.pl:		print Destination 'v -t 0.003 -e sim_annotation 0.003 2 Nodes turn red when there is a collision ', "\n";
+tcl/edu/chan-interference/chanInterference.pl:			print Destination 'v -t ',$last_time,' -e sim_annotation ',$last_time,' ',$i,' and hence they interfere with each other resulting in collision',"\n";
+tcl/lan/vlan.tcl:	    #  For Mac level collision traces 
+tcl/lib/ns-compat.tcl:	# doesn't cause any collisions...
+tcl/lib/ns-sat.tcl:Mac/Sat set trace_collisions_ true
+tcl/lib/ns-sat.tcl:Mac/Sat/UnslottedAloha set mean_backoff_ 1s; # mean backoff time upon collision
+tcl/test/test-suite-smac.tcl:# 3 node topology brdcasting ping req/rep that result in collision
+tcl/test/test-suite-smac.tcl:    # due to collision discovers each other after about 60s.
+tcl/test/test-suite-smac.txt:2 nodes start sending at the same time. no collision.
+tcl/test/test-suite-smac.txt:3 node topology. Nodes brdcast ping requests at the same time. packets 6 and 8 have a collision and are dropped. They are not retx'ed as these are brdcast pkts.
+tcl/test/test-suite-smac.txt:4 nodes. 0->1 and 3->2. 3 cannot hear from 0. 2 can recv from only receiver 1. hence the 2 senders start sending at the same time which results in collision at recvr node 1. once the brdcast arp request is lost, it is never sent out again, which results in the ping request never leaving node 0. 2 & 3 exchange usual ping req/reply.
+tcl/test/test-suite-smac.txt:same scenario as 6. 0->1 and 2->3. same collision happens at node 1. arp is not brdcasted again. hence node 0 never gets to send out ping req to 1.
+tcl/test/test-suite-smac.txt:same as 6. 1->0 and 2->3. now the sender can hear one another and so avoids collision.
+tcl/test/test-suite-lan.tcl:# Mac level collision traces using flat tracing
+tcl/test/test-suite-lan.txt:     - lan-mactrace: validates the behavior of MAC level collision traces
+tcl/test/test-suite-lan.txt:       collision. This is recored as a 'c' in the trace files. 
+tcl/test/test-suite-lan.txt:       After a collision, the source double the time it defers, before it 
+tcl/test/test-suite-satellite.tcl:# ns test-suite-satellite.tcl aloha.collisions
+tcl/test/test-suite-satellite.tcl:	Mac/Sat set trace_collisions_ false
+tcl/test/test-suite-satellite.tcl:Class Test/aloha.collisions -superclass TestSuite
+tcl/test/test-suite-satellite.tcl:Test/aloha.collisions instproc init {} {
+tcl/test/test-suite-satellite.tcl:Test/aloha.collisions instproc run {} {
+tcl/test/test-suite-satellite.tcl:	Mac/Sat set trace_collisions_ true
+validate.out:Tests: repeater mixed wired aloha aloha.collisions mixed.legacy
+validate.out:Running test aloha.collisions:
+validate.out:../../ns test-suite-satellite.tcl aloha.collisions QUIET
+wpan/p802_15_4mac.cc:		//drop the packet if the link quality is too bad (basically, collisions)
