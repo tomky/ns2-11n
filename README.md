@@ -1,7 +1,7 @@
 ns2-11n
 =======
 
-NS2.29 with IEEE 802.11n module
+NS2.29 with IEEE 802.11n module. An example code is provided in test-n.tcl.
 
 This work is used in the following article.
 
